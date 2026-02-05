@@ -1,5 +1,15 @@
-Here is the library that u need for modbus communication between IOC and PiControl and i give my example node-red flow for you to revise
+Modbus Communication between IOC and PiControl
+Important Note
 
-If you want to know more about the library and how to use the library for IRIV IP Controller (IOC),
-you can check from the link below. This github is the part of the modbus library protocol from author waiweng83 from Cytron Technologies.
-It is part of the the library from https://github.com/CytronTechnologies/Cytron-IRIV-IO-Controller/tree/main
+The host IP address on the Modbus server must be different from the PiControl port IP address to avoid conflicts.
+
+Library
+
+This repository provides the library needed for Modbus communication between the IRIV IO Controller (IOC) and PiControl.
+
+An example Node-RED flow is also included to help you get started and customize your setup.
+
+Documentation & Reference
+
+To learn more about this library and how to use it with the IRIV IO Controller, visit the official GitHub page by waiweng83 from Cytron Technologies:
+https://github.com/CytronTechnologies/Cytron-IRIV-IO-Controller/tree/main
