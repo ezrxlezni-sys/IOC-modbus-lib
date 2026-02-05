@@ -1,0 +1,153 @@
+[
+    {
+        "id": "27eb8f1210167bd4",
+        "type": "tab",
+        "label": "TCP Communication",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "bef45718fd25fac8",
+        "type": "group",
+        "z": "27eb8f1210167bd4",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "c826bb73c8b25270",
+            "c0f232ea52d0d1bc",
+            "09255770fb4da456",
+            "86ee3a9048b9593e"
+        ],
+        "x": 174,
+        "y": 119,
+        "w": 672,
+        "h": 202
+    },
+    {
+        "id": "c826bb73c8b25270",
+        "type": "inject",
+        "z": "27eb8f1210167bd4",
+        "g": "bef45718fd25fac8",
+        "name": "Send Value",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 290,
+        "y": 220,
+        "wires": [
+            [
+                "86ee3a9048b9593e"
+            ]
+        ]
+    },
+    {
+        "id": "c0f232ea52d0d1bc",
+        "type": "debug",
+        "z": "27eb8f1210167bd4",
+        "g": "bef45718fd25fac8",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "09255770fb4da456",
+        "type": "debug",
+        "z": "27eb8f1210167bd4",
+        "g": "bef45718fd25fac8",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "86ee3a9048b9593e",
+        "type": "modbus-write",
+        "z": "27eb8f1210167bd4",
+        "g": "bef45718fd25fac8",
+        "name": "",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "256",
+        "quantity": "1",
+        "server": "9117455d883eee9e",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": true,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 500,
+        "y": 220,
+        "wires": [
+            [
+                "c0f232ea52d0d1bc"
+            ],
+            [
+                "09255770fb4da456"
+            ]
+        ]
+    },
+    {
+        "id": "9117455d883eee9e",
+        "type": "modbus-client",
+        "name": "IO Controller TCP COMM",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "10.0.0.2",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    }
+]
