@@ -13,3 +13,6 @@ Documentation & Reference
 
 To learn more about this library and how to use it with the IRIV IO Controller, visit the official GitHub page by waiweng83 from Cytron Technologies:
 https://github.com/CytronTechnologies/Cytron-IRIV-IO-Controller/tree/main
+
+
+-EZ Cytron-
